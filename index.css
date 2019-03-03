@@ -1,46 +1,39 @@
 
-	html {
-		height: 100%;
-		overflow: hidden;
-	}
-
-	body {
-		height:100%;
-		overflow: auto;
-		-webkit-overflow-scrolling: touch;
-	}
-	
 	html{
 		height:100%;
-		background: #ffffff url(https://s3-sa-east-1.amazonaws.com/ong-imas-cdn/site-under-construction/images/home-bg-min-low.jpg); no-repeat center center fixed;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
+		background: #ffffff url(https://s3-sa-east-1.amazonaws.com/ong-imas-cdn/site-under-construction/images/home-bg-min-low.jpg) no-repeat center center fixed;
+	}
+
+	.page body{
+		background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 7%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.23) 100%); 
+		background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 7%,rgba(0,0,0,0) 80%,rgba(0,0,0,0.23) 100%); 
+		background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 7%,rgba(0,0,0,0) 80%,rgba(0,0,0,0.23) 100%); 
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#3b000000',GradientType=1 ); 
 	}
 
 
-	
-
-
-	#cspio-page{
+	#uc-imas-page{
 		background-color: rgba(0,0,0,0);
 	}
 
-	#cspio-logo {
+	#uc-imas-logo {
 		width: 230px;
 	}
 	
-	.flexbox #cspio-page{
+	.flexbox #uc-imas-page{
 		align-items: center;
 		justify-content: center;
 	}
 
-	.cspio body{
+	.uc-imas body{
 		background: transparent;
 	}
 
-	.cspio body, .cspio body p{
+	.uc-imas body, .uc-imas body p{
         font-family: Helvetica, Arial, sans-serif;
 		font-weight: 400;
 		font-style: ;
@@ -73,12 +66,12 @@
 		font-style: ;
 	}
 
-    .cspio h1, .cspio h2, .cspio h3, .cspio h4, .cspio h5, .cspio h6{
+    .uc-imas h1, .uc-imas h2, .uc-imas h3, .uc-imas h4, .uc-imas h5, .uc-imas h6{
         font-family: 'Pacifico';
         color:#ffffff;
     }
 
-	#cspio-headline {
+	#uc-imas-headline {
 		/*font-family: 'Pacifico';*/
 		/*font-weight: 400;*/
 		font-style: ;
@@ -96,7 +89,7 @@
 	}
 	
 
-	#cspio-headline .text-primary {
+	#uc-imas-headline .text-primary {
 		color: #2a6bb7!important;
     	text-shadow: 1px 1px #adb5bd;
 	}
@@ -132,28 +125,31 @@
 	}
 
 
-	#cspio-description {
-text-transform: uppercase;
+	#uc-imas-description {
+		text-transform: uppercase;
 	    font-weight: 500;
+	    color:#fff;
+	    margin-bottom: 30px;
+	    font-size: 20px;
 	    /*font-family: 'Saira Extra Condensed',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';		*/
 	}
 
 
-	.cspio button{
+	.uc-imas button{
         font-family: Helvetica, Arial, sans-serif;
 		font-weight: 400;
 		font-style: ;
     }
 	
-    .cspio a, .cspio a:visited, .cspio a:hover, .cspio a:active{
+    .uc-imas a, .uc-imas a:visited, .uc-imas a:hover, .uc-imas a:active{
 		color: #ffffff;
 	}
 
-	#cspio-socialprofiles a {
+	#uc-imas-socialprofiles a {
 	  color: #ffffff;
 	}
-	.cspio .btn-primary,
-	.cspio .btn-primary:focus,
+	.uc-imas .btn-primary,
+	.uc-imas .btn-primary:focus,
 	.gform_button,
 	#mc-embedded-subscribe, .submit-button {
 		color: black;
@@ -173,16 +169,16 @@ text-transform: uppercase;
 		filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 	}
 
-	.cspio .btn-primary:hover,
-	.cspio .btn-primary:active,
-	.cspio .btn-primary.active,
-	.cspio .btn-primary.disabled,
-	.cspio .btn-primary[disabled],
-	.cspio .btn-primary:focus:hover,
-	.cspio .btn-primary:focus:active,
-	.cspio .btn-primary:focus.active,
-	.cspio .btn-primary:focus.disabled,
-	.cspio .btn-primary:focus[disabled],
+	.uc-imas .btn-primary:hover,
+	.uc-imas .btn-primary:active,
+	.uc-imas .btn-primary.active,
+	.uc-imas .btn-primary.disabled,
+	.uc-imas .btn-primary[disabled],
+	.uc-imas .btn-primary:focus:hover,
+	.uc-imas .btn-primary:focus:active,
+	.uc-imas .btn-primary:focus.active,
+	.uc-imas .btn-primary:focus.disabled,
+	.uc-imas .btn-primary:focus[disabled],
 	#mc-embedded-subscribe:hover,
 	#mc-embedded-subscribe:active,
 	#mc-embedded-subscribe.active,
@@ -192,10 +188,10 @@ text-transform: uppercase;
 		*background-color: #cccccc;
 	}
 
-	.cspio .btn-primary:active,
-	.cspio .btn-primary.active,
-	.cspio .btn-primary:focus:active,
-	.cspio .btn-primary:focus.active,
+	.uc-imas .btn-primary:active,
+	.uc-imas .btn-primary.active,
+	.uc-imas .btn-primary:focus:active,
+	.uc-imas .btn-primary:focus.active,
 	.gform_button:active,
 	.gform_button.active,
 	#mc-embedded-subscribe:active,
@@ -208,26 +204,26 @@ text-transform: uppercase;
 		background-color: rgba(255, 255, 255, 0.85);
 	}
 
-	#cspio-progressbar span,
+	#uc-imas-progressbar span,
 	.countdown_section {
 		color: black;
 		text-shadow: 0 -1px 0 rgba(255,255,255,0.3);
 	}
 
-	.cspio .btn-primary:hover,
-	.cspio .btn-primary:active {
+	.uc-imas .btn-primary:hover,
+	.uc-imas .btn-primary:active {
 		color: black;
 		text-shadow: 0 -1px 0 rgba(255,255,255,0.3);
 		border-color: #e6e6e6;
 	}
 
-	.cspio input[type='text']:focus {
+	.uc-imas input[type='text']:focus {
 		webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(217,217,217,0.6);
 		-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(217,217,217,0.6);
 		box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(217,217,217,0.6);
 	}
     
-    #cspio-content {
+    #uc-imas-content {
 		display: none;
 		max-width: 600px;
 		background-color: #000000;
@@ -239,52 +235,51 @@ text-transform: uppercase;
 		background-color:transparent;
 	}
     
-	.cspio .progress-bar,
+	.uc-imas .progress-bar,
 	.countdown_section,
-	.cspio .btn-primary,
-	.cspio .btn-primary:focus,
+	.uc-imas .btn-primary,
+	.uc-imas .btn-primary:focus,
 	.gform_button {
 		background-image: none;
 		text-shadow: none;
 	}
 
-	.cspio input,
-	.cspio input:focus {
+	.uc-imas input,
+	.uc-imas input:focus {
 		-webkit-box-shadow: none !important;
 		box-shadow: none !important;
 	}
 							
-	#cspio-page{
+	#uc-imas-page{
 	    background: -moz-radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%,rgba(0, 0, 0, 0.2) 37%,rgba(0,0,0,0) 68%,rgba(0,0,0,0) 100%);
 	    background: -webkit-radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%,rgba(0, 0, 0, 0.2) 37%,rgba(0,0,0,0) 68%,rgba(0,0,0,0) 100%);
 	    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%,rgba(0, 0, 0, 0.2) 37%,rgba(0,0,0,0) 68%,rgba(0,0,0,0) 100%);
 	}
 
-	.cspio body{
-		background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 7%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.23) 100%); 
-		background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 7%,rgba(0,0,0,0) 80%,rgba(0,0,0,0.23) 100%); 
-		background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 7%,rgba(0,0,0,0) 80%,rgba(0,0,0,0.23) 100%); 
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#3b000000',GradientType=1 ); 
-	}
+	
 
-	#cspio-subscribe-btn{
+	#uc-imas-subscribe-btn{
 	    background:transparent;
 	    border: 1px solid #fff !important;
 	    color: #fff;
 	}
 
-	#cspio-subscribe-btn:hover{
+	#uc-imas-subscribe-btn:hover{
 	    background: rgba(255,255,255,0.2);
 	    color: #fff;
 	}
 
-	#cspio-credit img{
+	#uc-imas-credit img{
 		margin-left:auto;
 		margin-right:auto;
 		width:125px;
 		    margin-top: -4px;
 	}
 
-	#cspio-credit {
+	#uc-imas-credit {
 		font-size:11px;
-	}s
+	}
+
+#uc-imas-newsletter-message	{
+	display: none;
+}
