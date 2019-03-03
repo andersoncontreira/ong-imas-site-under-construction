@@ -1,0 +1,65 @@
+html{
+	height: 100%;
+  	margin-top: 0 !important;	
+	overflow: hidden;	
+}
+
+body{
+	text-align:center;
+	padding:0 0px;
+	height:100%;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.placeholder { color: #aaa; }
+
+#uc-imas-page{
+	padding: 60px 10px 0 10px;
+ 	min-height: 100%;
+}
+
+/* Responsive Images */
+#uc-imas-description img,#uc-imas-thankyoumsg img, #uc-imas-logo{
+	max-width:100%;
+	height:auto;
+    margin-bottom: 30px;
+}
+
+#uc-imas-content {
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+#uc-imas-policy {
+	display: inline-block;
+    font-size: 11px;
+    margin-bottom: 30px;
+    color:#fff;
+}
+
+.seperate #uc-imas-subscribe-btn {
+    margin-left: 10px;
+}
+#uc-imas-subscribe-btn {
+    margin-bottom: 10px;
+}
+
+.page .seperate .input-group .form-control:last-child, 
+.page .seperate .input-group-addon:last-child, 
+.page .seperate .input-group-btn:last-child>.btn, 
+.page .seperate .input-group-btn:last-child>.dropdown-toggle, 
+.page .seperate .input-group-btn:first-child>.btn:not(:first-child) {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.page .seperate .input-group .form-control:first-child, 
+.page .seperate .input-group-addon:first-child, 
+.page .seperate .input-group-btn:first-child>.btn, 
+.page .seperate .input-group-btn:first-child>.dropdown-toggle, 
+.page .seperate .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
