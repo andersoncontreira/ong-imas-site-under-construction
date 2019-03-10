@@ -166,7 +166,6 @@
 		}
 
 		$('#newsletter-form').on('submit', function(e) {
-			//console.log('submit');
 			e.preventDefault();
 
 			$('div.alert').remove()
@@ -179,10 +178,9 @@
 			//dev only
 			if (window.location.hostname === "localhost") {
 				host = "http://localhost:3000"
-				url = host + url
-			} else {
-				url = "." + url
 			}
+
+			url = host + url
 			
 			$.post(url, data, function(response) {
 				
