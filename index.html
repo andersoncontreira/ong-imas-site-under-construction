@@ -166,7 +166,68 @@
 		}
 
 		$('#newsletter-form').on('submit', function(e) {
+
 			e.preventDefault();
+
+			let errorMessage = 'Ocorreu um erro ao tentar registrar o email.';
+
+			let errorFn = function(jqXHR) {
+
+				try {
+					//console.log(jqXHR.responseText)
+					let response = JSON.parse(jqXHR.responseText);
+					//errorMessage = response.message
+					console.error(response.message);
+
+				} catch (e) {
+					console.error(e.message)
+				}
+
+				let messageBox = createAlert();
+
+				$('#newsletter-form').before(messageBox)
+
+				messageBox.removeClass('alert-success').addClass('alert-danger')
+				messageBox.find('.message').text(errorMessage)
+
+			}
+
+			let successFn = function(response) {
+
+				let error = false;
+				let message = 'Email cadastrado com sucesso!';
+
+				let messageBox = createAlert()
+
+				if (response != null) {
+
+					let data = response
+
+					if (typeof(response) === 'string') {
+						data = JSON.parse(response)
+					}
+
+					if (data.hasOwnProperty('result')) {
+						messageBox.find('.message').text(message)
+					} else {
+						error = true;
+					}
+				} else {
+					error = true;
+				}
+
+				$('#newsletter-form').before(messageBox)
+
+				if (error) {
+					messageBox.removeClass('alert-success').addClass('alert-danger')
+					messageBox.find('.message').text(errorMessage)
+				} else {
+					$('#uc-imas-email').val()
+					messageBox.show();
+
+				}
+
+			}
 
 			$('div.alert').remove()
 
@@ -181,45 +242,16 @@
 			}
 
 			url = host + url
-			
-			$.post(url, data, function(response) {
-				
-				let error = false;
-				let message = 'Email cadastrado com sucesso!';
-				let errorMessage = 'Ocorreu um erro ao tentar registrar o email.';
 
-				let messageBox = createAlert()
-
-				if (response != null) {
-
-					let data = response
-					
-					if (typeof(response) === 'string') {
-						data = JSON.parse(response)	
-					}	
-					 
-					if (data.hasOwnProperty('result')) {
-						messageBox.find('.message').text(message)	
-					} else {
-						error = true;
-					}
-				} else {
-					error = true;
-				}
-
-				$('#newsletter-form').before(messageBox)
-				
-				if (error) {
-					messageBox.removeClass('alert-success').addClass('alert-danger')
-					messageBox.find('.message').text(errorMessage)	
-				} else {
-					$('#uc-imas-email').val()
-					messageBox.show();
-
-				}
-
-
+			$.ajax({
+				type: "POST",
+				url: url,
+				data: data,
+				//dataType: 'application/json'
+				success: successFn,
+				error: errorFn
 			})
+
 		}) 
 	</script>
 
